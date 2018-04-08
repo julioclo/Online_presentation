@@ -1,0 +1,66 @@
+---
+title: "Online Presentation"
+author: "Julio Lopez"
+date: "`r Sys.Date()`"
+output: 
+  html_document: 
+    highlight: pygments
+    theme: cerulean
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Briefly summarize the main points/research questions
+
+Montrul and Sánchez-Walker (2013) study the production of DOM in Spanish in several groups of Spanish-English bilinguals, as well as in Spanish monolinguals for comparison purposes. The research questions of the study are: (1) Do younger bilingual children show omission of DOM as well (as adults)?; (2) Does age of onset of bilingualism and exposure to English affect omission of DOM in child and adult heritage speakers?, and (3) Do adult immigrants with several years of residence in the United States omit DOM with animate objects?
+
+
+# Scrutinize their methods
+##### Explanation of analysis
+
+The authors implemented a background questionnaire and two tasks: a Story Retelling Task and a Picture Description Task. During the Story Retelling Task, participants were asked to retell the children’s tale Little Red Riding Hood in the past with as much details as possible. During the Picture Description Task, participants were presented with 28 pictures that elicited the production of a transitive structure: 7 verbs appearing with animate objects (saludar, recibir, atacar, ayudar, secuestrar, mirar, castigar), 7 verbs appearing with inanimate objects (escuchar, comer, aprender, beber, arreglar, leer, firmar), and 7 verbs appearing with both animate and inanimate objects (llevar, conocer, abrazar, visitar, besar, tocar, ver).
+
+##### What did they do?
+
+They found differences in the production of DOM across different participant groups. The participants were grouped according to their age of onset of acquisition and their age. In the child groups, there are three groups: simultaneous heritage speakers, sequential heritage speakers, and native speakers. In the adult groups, there are five groups: younger simultaneous bilingual heritage speakers, younger sequential bilingual heritage speakers, young adult native speakers, older immigrants, and older native speakers.
+
+##### How did they do it?
+
+The authors coded the participants’ responses as 0 or 1 depending on whether they had been accurate or not. “Animate direct objects correctly marked with ‘a’ were coded as 1; unmarked specific animate direct objects received 0. The opposite scoring applied with inanimate objects: incorrectly marked objects were coded as 0 and correctly unmarked objects as 1.” (p. 115).
+For Study 1, focusing on the child groups, the authors ran a two-way ANOVA comparing accuracy on type of object (animate vs inanimate) by group (simultaneous heritage speakers, sequential heritage speakers, and native speakers).
+For Study 2, focusing on adult groups, the authors also ran a two-way ANOVA comparing accuracy on object (animate vs inanimate) and group (younger simultaneous bilingual heritage speakers, younger sequential bilingual heritage speakers, young adult native speakers, older immigrants, and older native speakers).
+Aside from the main effects for object and group, the authors used one-way ANOVA and pairwise comparisons to explore further main effects and interactions (e.g., role of age, role of exposure to Spanish and other linguistic background information included in the questionnaire).
+
+##### Why did they do it?
+The motivation behind this specific analysis is not reported in the study. They might have used ANOVA because they compare whole groups. However, I do not know if such decision is valid given that their group scores must be based on the average of the participants’ individual scores, although such information is not reported either. Finally, although they compare groups, they are also interested in variability and individual differences for age and item effects, for instance. Also, they divide their groups in omitters and non-omitters depending on their performance and run more analyses on them.
+
+
+# Appropriateness/novelty of analysis
+##### Given what you know/what you have previously read, was this the best analysis? 
+
+##### Did they do something you haven’t seen before? What? Why? How?
+
+No. I believe a generalized linear mixed model would have been a more fine-grained analysis. The authors could have included all the variables that they considered pertinent into the analysis: animacy of the object, group, age of onset of acquisition of Spanish/English, random effects for participants and items, as well as any other relevant information from the linguistic background questionnaire. Also, they could have coded the DOM as either present or absent instead of ‘interpreting’ the results as accurate or inaccurate. The results of the analysis do not reflect the production of DOM as a function of other predictors, but the accuracy in which participants produced it. This makes the model results more difficult to understand.
+
+
+# Presentation of results
+
+##### Did they properly/accurately explain their results?
+
+##### Did they properly/accurately interpret their findings?
+
+##### Did they use tables/graphs? Did the tables/graphs facilitate the interpretation of the results?
+
+Yes, the author explained and interpreted their results accurately. However, their results looked at group differences in DOM accuracy as a function of animacy of the object. The two-way ANOVA that they ran are not as comprehensive as the findings that they aim to obtain, so they perform other tests to explore differences in terms of age, age of onset of acquisition, etc.
+On the other hand, the figures in the study are very confusing. The authors include figures in which the Y axis represents “mean % accuracy producing DOM” and the X axis represents “individual participants”. Each line drawn in the figure represents a different group. The figure shows the least accurate participants on the left, whereas the most accurate participants appear on the right side of the axis X. That way, for example, one line in the figure starts at X1-Y20, moves on to X2-Y30, and keeps moving up until reach Y100 in X15.
+This figure is misleading, as it gives the reader the impression of a sort of progression in the groups, whereas it simply depicts individual differences within and across groups. I believe that a table reporting individual differences could have been simpler and clearer, as it would allow for the reader to directly find the individual results. Instead, this figure does not provide the reader with any numeric result, but with a misleading impression of a positive correlation between DOM and something else as a function of group.
+Finally, the authors included a histogram to plot the mean accuracy results across groups. Instead, they could have used boxplots, which are more informative.
+
+
+# Briefly describe why/what you liked or disliked about their analysis
+Their analysis looked at many different variables, such as group, animacy, age, age of acquisition of Spanish/English, as well as other variables. However, they mostly used ANOVA (and several times) instead of running a more powerful analysis beforehand. A GLMM could have included more predictors, as well as random effects for participant and item. Also, I wonder if interpreting the results at the time of the coding (assigning 0 or 1 depending on accuracy instead of just reporting whether the DOM had been produced or not) might have affected the statistical results. Additionally, when they looked at individual differences, they divided the groups in omitters and non-omitters by drawing an ‘accuracy line’ at 80%. If results are bimodal, shouldn’t they have used a statistical tool to confirm it instead of dividing the groups arbitrarily? Finally, the figures are sometimes misleading and not informative enough.
+
+# References
+Montrul, S., & Sánchez-Walker, N. (2013) Differential object marking in child and adult Spanish heritage speakers. Language Acquisition, 20, 1–24.
